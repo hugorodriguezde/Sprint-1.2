@@ -1,0 +1,181 @@
+$primary:#5265E1;
+$secondary: #FA5959;
+$tertiary: rgb(237, 237, 237);
+$colorfont:grey;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary" : $tertiary,
+  "colorfont" : $colorfont
+);
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link:hover {
+  color:$secondary;
+}
+
+.btn-secondary:hover {
+  color: $secondary !important;
+  border-color: $secondary;
+  background-color: white;
+}
+
+.btn-primary:hover {
+  color: $primary !important;
+  border-color: $primary;
+  background-color: white;
+}
+
+.btn-tertiary:hover {
+  color: rgb(86, 85, 85) !important;
+  border-color:  rgb(86, 85, 85);
+  background-color: white;
+}
+
+.nav-tabs {
+  justify-content: center;
+  border:none;
+  color: $colorfont !important;
+  display: flex;
+}
+
+.nav-link {
+  border: none !important;
+  cursor: pointer;
+  color: grey;
+  padding: 30px;
+  text-align: center !important;
+}
+
+.nav-link.active {
+  border-bottom: 3px solid #FA5959 !important;
+  color:black !important;
+}
+
+#download{
+  margin-top:150px !important;
+}
+
+.cards{
+  .card {
+    width: 350px;
+    border-radius: 1rem;
+    border-color: transparent;
+
+    img {
+      width: 8rem;
+    }
+
+    .dotted-line {
+      width: 15rem;
+    }
+
+    button {
+      width: 80%;
+      color: white;
+    }
+  }
+
+  div:nth-child(1) {
+    margin-bottom: 4rem;
+  }
+
+  div:nth-child(2){
+    margin-top: 2rem;;
+    margin-bottom: 2rem;
+  }
+  div:nth-child(3){
+    margin-top: 4rem;;
+  }
+}
+
+#faq {
+  margin-top: 100px;
+}
+
+.accordion-button {
+  font-size: 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: white;
+}
+
+.accordion-button.collapsed::after {
+  background-image: url(assets/Imagenes/icon-arrow.svg);
+  color: $primary;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(assets/Imagenes/icon-arrow.svg);
+  filter: invert(52%) sepia(15%) saturate(7470%) hue-rotate(323deg) brightness(90%) contrast(107%);
+}
+
+.accordion-button:focus {
+  box-shadow: unset;
+}
+
+.accordion-button:hover {
+  color: $secondary;
+}
+
+#info {
+  width: 10rem;
+}
+
+
+footer {
+  margin-top: 8rem;
+}
+
+
+
+.formulario-contacto {
+  display: inline-block;
+  position: relative;
+}
+.invalid-feedback {
+  background-color:$secondary;
+  color: white;
+}
+
+.footer {
+
+  .navbar-brand {
+    width: 10em;
+  }
+
+  background-color: #282c44;
+  font-size: 1rem;
+
+  .navbar-social > a {
+    padding: 0.5rem;
+    &:hover {
+      color:$secondary
+    }
+  }
+
+  .nabvar-footer {
+    a {
+        color: white;
+        &:hover {
+          color: $secondary;
+        }
+    }
+  }
+}
+.row {
+  margin: 0;
+}
+
+#invert-bookmark {
+  filter: invert(20%) brightness(100%) saturate(100%);
+}
